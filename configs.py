@@ -1,5 +1,4 @@
 # Global configuration
-import subprocess
 import yaml
 from modules.awl_detector import config_rcnn
 from modules.crp_classifier import credential_config

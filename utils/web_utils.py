@@ -1,10 +1,8 @@
-from selenium.common.exceptions import NoSuchElementException, TimeoutException, MoveTargetOutOfBoundsException, StaleElementReferenceException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, MoveTargetOutOfBoundsException
 from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import helium
 import time
 import re
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 
@@ -23,6 +21,9 @@ def initialize_chrome_settings():
     options.add_argument('--no-proxy-server')
     options.add_argument("--proxy-server='direct://'")
     options.add_argument("--proxy-bypass-list=*")
+    #options.add_argument('--no-proxy-server')
+    #options.add_argument("--proxy-server=http://127.0.0.1:7897;https://127.0.0.1:7897")
+    #options.add_argument("--proxy-bypass-list=<-loopback>")
 
     options.add_argument("--start-maximized")
     options.add_argument('--window-size=1920,1080')  # fix screenshot size
@@ -117,8 +118,11 @@ def visit_url(driver, orig_url):
     :return: load url successful or not
     '''
     try:
+        print("try get url")
         driver.get(orig_url)
+        print("get url success!")
         time.sleep(2)
+        print("try switch to alert")
         driver.switch_to.alert.dismiss()
         return True, driver
     except TimeoutException as e:

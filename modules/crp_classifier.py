@@ -8,11 +8,7 @@ from lxml import html
 import io
 import os
 import numpy as np
-from utils.utils import read_img_reverse, coord2pixel_reverse, topo2pixel
-from collections import OrderedDict  # pylint: disable=g-importing-member
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+from utils.utils import coord2pixel_reverse
 from modules.models import KNOWN_MODELS
 
 def credential_config(checkpoint, model_type='mixed'):
@@ -110,7 +106,7 @@ def read_html(html_path):
             tree = html.fromstring(page)
             tree_list = tree
             done = True
-    except Exception as e:
+    except Exception:
         pass
 
     # try another encoding
@@ -121,7 +117,7 @@ def read_html(html_path):
                 tree = html.fromstring(page)
                 tree_list = tree
                 done = True
-        except Exception as e:
+        except Exception:
             pass
 
     # try another encoding
@@ -132,7 +128,7 @@ def read_html(html_path):
                 tree = html.fromstring(page)
                 tree_list = tree
                 done = True
-        except Exception as e:
+        except Exception:
             pass
 
     return tree_list

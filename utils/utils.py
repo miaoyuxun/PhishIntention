@@ -1,7 +1,6 @@
 import torch
 import cv2
 import numpy as np
-import os
 import math
 
 
@@ -187,8 +186,6 @@ def read_img_reverse(img, coords, types, num_types=5, grid_num=10) -> torch.Tens
 
 
 import torch.nn.functional as F
-from PIL import Image
-import math
 
 def resolution_alignment(img1, img2):
     '''

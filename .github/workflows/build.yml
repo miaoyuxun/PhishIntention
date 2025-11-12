@@ -23,7 +23,7 @@ jobs:
           pip install ruff
       # Update output format to enable automatic inline annotations.
       - name: Run Ruff
-        run: ruff check --exclude "ocr_lib/" -e
+        run: ruff check --output-format=github --exclude "ocr_lib/" -e; ruff check --statistics --output-format=github --exclude "ocr_lib/" -e
         
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v6

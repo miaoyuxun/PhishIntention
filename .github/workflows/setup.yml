@@ -25,10 +25,10 @@ jobs:
         run: powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
 
       - name: Install pixi dependences
-        run: pixi install
+        run: C:\Users\runneradmin\.pixi\bin\pixi install
 
       - name: Install detectron2 and download models
         run: .\setup.bat
 
       - name: Run test
-        run: pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt
+        run: C:\Users\runneradmin\.pixi\bin\pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt

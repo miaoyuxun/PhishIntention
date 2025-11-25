@@ -13,7 +13,6 @@ unzip chrome-win64.zip
 curl -O "https://storage.googleapis.com/chrome-for-testing-public/%stableVersion%/win64/chromedriver-win64.zip"
 unzip chromedriver-win64.zip
 
-dir
-dir chromedriver-win64
+mkdir chromedriver
 
 copy chromedriver-win64\chromedriver.exe chromedriver\chromedriver

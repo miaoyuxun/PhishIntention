@@ -1,0 +1,34 @@
+name: Static tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  setup_tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+        include:
+          - os: windows-latest
+            platform: windows
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install latest chrome and driver
+        run: .\chrome_setup.bat
+
+      - name: Install pixi
+        run: powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
+
+      - name: Install pixi dependences
+        run: pixi install
+
+      - name: Install detectron2 and download models
+        run: .\setup.bat
+
+      - name: Run test
+        run: pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt

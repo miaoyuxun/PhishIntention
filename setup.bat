@@ -3,6 +3,7 @@ setlocal enabledelayedexpansion
 
 :: ------------------------------------------------------------------------------
 :: Install Detectron2
+pip install --extra-index-url https://miropsota.github.io/torch_packages_builder detectron2==0.6+18f6958pt2.8.0cpu
 :: ------------------------------------------------------------------------------
 
 REM Create models directory and change into it

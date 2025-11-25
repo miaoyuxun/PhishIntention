@@ -50,8 +50,14 @@ def load_config(reload_targetlist=False):
                                          weights_path=configs['SIAMESE_MODEL']['WEIGHTS_PATH'])
 
     OCR_MODEL = ocr_model_config(weights_path = configs['SIAMESE_MODEL']['OCR_WEIGHTS_PATH'])
-
-    if reload_targetlist or (not os.path.exists(os.path.join(os.path.dirname(__file__), 'LOGO_FEATS.npy'))):
+    
+    if not reload_targetlist and os.path.exists(os.path.join(os.path.dirname(__file__), 'LOGO_FEATS_1.npy')): #文件太大，暂时拆成两份保存在github用于自动化测试
+        LOGO_FEATS_1, LOGO_FEATS_2, LOGO_FILES = np.load(os.path.join(os.path.dirname(__file__),'LOGO_FEATS_1.npy')), \
+                                 np.load(os.path.join(os.path.dirname(__file__),'LOGO_FEATS_2.npy')), \
+                                 np.load(os.path.join(os.path.dirname(__file__),'LOGO_FILES.npy'))
+        LOGO_FEATS = np.concatenate([LOGO_FEATS_1, LOGO_FEATS_2])
+                                 
+    elif reload_targetlist or (not os.path.exists(os.path.join(os.path.dirname(__file__), 'LOGO_FEATS.npy'))):
         LOGO_FEATS, LOGO_FILES = cache_reference_list(model=SIAMESE_MODEL,
                                                       ocr_model=OCR_MODEL,
                                                       targetlist_path=full_targetlist_folder_dir)

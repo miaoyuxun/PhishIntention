@@ -1496,44 +1496,44 @@ let showingDetails=false;let lastData=null;function toggleHelpBox(){showingDetai
           <h1>
             <span>无法访问此网站</span>
           </h1>
-          <!--?lit$774611348$-->
+          <!--?lit$369953042$-->
             <p>检查 <span>ru.russianmastercach-republick.xyz</span> 中是否有拼写错误。</p>
           
 
-          <!--?lit$774611348$-->
+          <!--?lit$369953042$-->
             <div id="suggestions-list">
-              <p><!--?lit$774611348$--></p>
+              <p><!--?lit$369953042$--></p>
               <ul class="single-suggestion">
-                <!--?lit$774611348$--><!---->
+                <!--?lit$369953042$--><!---->
                   <li>如果拼写无误，请<a href="javascript:diagnoseErrors()" id="diagnose-link">尝试运行 Windows 网络诊断</a>。</li>
                 <!---->
               </ul>
             </div>
           
 
-          <div class="error-code"><!--?lit$774611348$-->DNS_PROBE_FINISHED_NXDOMAIN</div>
+          <div class="error-code"><!--?lit$369953042$-->DNS_PROBE_FINISHED_NXDOMAIN</div>
 
-          <!--?lit$774611348$-->
+          <!--?lit$369953042$-->
         </div>
       </div>
       <div id="buttons" class="nav-wrapper suggested-left">
         <div id="control-buttons">
-          <!--?lit$774611348$-->
+          <!--?lit$369953042$-->
             <button id="reload-button" class="blue-button text-button" data-url="https://ru.russianmastercach-republick.xyz/">
-              <!--?lit$774611348$-->重新加载
+              <!--?lit$369953042$-->重新加载
             </button>
           
-          <!--?lit$774611348$-->
+          <!--?lit$369953042$-->
         </div>
-        <!--?lit$774611348$-->
+        <!--?lit$369953042$-->
       </div>
-      <!--?lit$774611348$-->
+      <!--?lit$369953042$-->
         <div id="details">
-          <!--?lit$774611348$-->
+          <!--?lit$369953042$-->
         </div>
       
     </div>
-    <!--?lit$774611348$-->
+    <!--?lit$369953042$-->
       <div id="sub-frame-error">
         <!-- Show details when hovering over the icon, in case the details are
              hidden because they're too large. -->

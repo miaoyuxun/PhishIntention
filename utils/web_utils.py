@@ -137,7 +137,7 @@ def visit_url(driver, orig_url):
 def driver_loader():
 
     options = initialize_chrome_settings()
-    service = ChromeService(executable_path="./chromedriver-linux64/chromedriver")
+    service = ChromeService(executable_path="./chromedriver/chromedriver")
     driver = webdriver.Chrome(service=service, options=options)
     driver.set_page_load_timeout(60)  # set timeout to avoid wasting time
     driver.set_script_timeout(60)  # set timeout to avoid wasting time

@@ -22,13 +22,16 @@ jobs:
         run: .\chrome_setup.bat
 
       - name: Install pixi
-        run: |
-            powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
-            powershell -Command "
-            # 刷新 PATH 环境变量
-            $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')
-            pixi install
-            .\setup.bat
-            pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt
-            "
+        run: powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
 
+      - name: Add pixi to PATH
+        run: echo "$env:USERPROFILE\.pixi\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+
+      - name: Install pixi dependences
+        run: pixi install
+
+      - name: Install detectron2 and download models
+        run: .\setup.bat
+
+      - name: Run test
+        run: pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt

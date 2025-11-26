@@ -11,3 +11,4 @@ temp_test/*
 version.txt
 last-known-good-versions.json
 chrome*
+datasets/test_sites/ru.russianmastercach-republick.xyz/new_html.txt

@@ -16,12 +16,14 @@ def load_config(reload_targetlist=False):
         configs = yaml.load(file, Loader=yaml.FullLoader)
 
     # Iterate through the configuration and update paths
+    # Need to test on github actions, do not use absolute path
+    '''
     for section, settings in configs.items():
         for key, value in settings.items():
             if 'PATH' in key and isinstance(value, str):  # Check if the key indicates a path
                 absolute_path = get_absolute_path(value)
                 configs[section][key] = absolute_path
-
+    '''
 
     AWL_MODEL = config_rcnn(cfg_path=configs['AWL_MODEL']['CFG_PATH'],
                                         weights_path=configs['AWL_MODEL']['WEIGHTS_PATH'],

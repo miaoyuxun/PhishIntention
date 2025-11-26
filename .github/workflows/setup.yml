@@ -24,7 +24,11 @@ jobs:
       - name: Install pixi
         run: |
             powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
-            echo "C:\Users\runneradmin\.pixi\bin" >> $GITHUB_PATH
+            powershell -Command "
+            # 刷新 PATH 环境变量
+            $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')
             pixi install
             .\setup.bat
             pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt
+            "
+

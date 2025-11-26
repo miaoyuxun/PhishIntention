@@ -22,13 +22,15 @@ jobs:
         run: .\chrome_setup.bat
 
       - name: Install pixi
-        run: powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
+        run: |
+            powershell -ExecutionPolicy ByPass -c "irm -useb https://pixi.sh/install.ps1 | iex"
+            echo "C:\Users\runneradmin\.pixi\bin" >> $GITHUB_PATH
 
       - name: Install pixi dependences
-        run: C:\Users\runneradmin\.pixi\bin\pixi install
+        run: pixi install
 
       - name: Install detectron2 and download models
         run: .\setup.bat
 
       - name: Run test
-        run: C:\Users\runneradmin\.pixi\bin\pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt
+        run: pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt

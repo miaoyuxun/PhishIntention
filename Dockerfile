@@ -22,7 +22,7 @@ RUN export KMP_DUPLICATE_LIB_OK=TRUE \
     && curl -fsSL https://pixi.sh/install.sh | sh \
     && echo "$HOME/.pixi/bin" >> "$GITHUB_PATH" \
     && chmod +x chrome_setup.sh \
-    && ./chrome_setup.sh
+    && ./chrome_setup.sh \
     && pixi install \
     && chmod +x setup.sh \
     && ./setup.sh

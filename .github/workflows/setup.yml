@@ -6,15 +6,20 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  setup_tests:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-latest]
-        include:
-          - os: windows-latest
-            platform: windows
+  linux_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
+      - name: Build Docker image
+        run: docker build -t phishintention .
+
+      - name: Run test
+        run: docker run --rm phishintention pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt
+
+  windows_test:
+    if: false
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
 

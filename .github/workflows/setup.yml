@@ -6,7 +6,45 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  macos_test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set environment variable
+        run: echo "KMP_DUPLICATE_LIB_OK=TRUE" >> $GITHUB_ENV
+      
+      - name: Install Pixi
+        run: |
+          curl -fsSL https://pixi.sh/install.sh | sh
+          echo "$HOME/.pixi/bin" >> $GITHUB_PATH
+      
+      - name: Install Chrome
+        run: |
+          brew install --cask google-chrome
+          
+          echo "CHROME_BIN=/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" >> $GITHUB_ENV
+          echo "/Applications/Google Chrome.app/Contents/MacOS" >> $GITHUB_PATH
+      
+      - name: Run setup scripts
+        run: chmod +x chrome_setup.sh && ./chrome_setup.sh
+                
+      - name: Verify Chrome
+        run: |
+          echo "=== Testing Chrome installation ==="
+          /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
+      
+      - name: Pixi install
+        run: pixi install
+
+      - name: Run setup scripts
+        run: chmod +x setup.sh && ./setup.sh
+
+      - name: Run test
+        run: pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1202.txt
+
   linux_test:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -34,13 +34,14 @@ def test_chromedriver_basic():
         chrome_options.add_argument('--headless')  # 无头模式，不显示浏览器窗口
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
+        chrome_options.add_argument('--verbose')
         
         # 创建Service对象（指定chromedriver路径）
-        # service = Service('/path/to/chromedriver')  # 如果chromedriver不在PATH中
+        service = Service('./chromedriver/chromedriver')  # 如果chromedriver不在PATH中
         
         # 启动浏览器
-        driver = webdriver.Chrome(options=chrome_options)  # 如果chromedriver在PATH中
-        # 或者：driver = webdriver.Chrome(service=service, options=chrome_options)
+        #driver = webdriver.Chrome(options=chrome_options)  # 如果chromedriver在PATH中
+        driver = webdriver.Chrome(service=service, options=chrome_options)
         
         # 测试访问网页
         test_urls = [

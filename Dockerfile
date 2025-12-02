@@ -31,14 +31,20 @@ RUN export KMP_DUPLICATE_LIB_OK=TRUE \
     && curl -fsSL https://pixi.sh/install.sh | sh \
     && echo 'export PATH="/root/.pixi/bin:$PATH"' >> /etc/profile.d/pixi.sh
 
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && \
+    apt-get update && \
+    apt-get install -y google-chrome-stable
+
 RUN chmod +x chrome_setup.sh \
     && ./chrome_setup.sh
 
-ENV PATH="chrome-linux64/chrome:/root/.pixi/bin:$PATH"
+ENV PATH="/opt/google/chrome:/usr/local/bin:/root/.pixi/bin:$PATH"
+ENV CHROME_BIN="/opt/google/chrome/chrome"
 
-RUN which pixi
-
-RUN which google-chrome
+RUN echo "=== 验证Chrome安装 ===" && \
+    which google-chrome-stable && \
+    google-chrome-stable --version
 
 RUN pixi install
 

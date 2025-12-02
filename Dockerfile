@@ -19,6 +19,9 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     libxrender-dev \
     libgl1 \
+    libnspr4 \
+    libnss3 \
+    libgconf-2-4 \
     && rm -rf /var/lib/apt/lists/*
 
 # 复制项目文件

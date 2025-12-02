@@ -37,7 +37,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     apt-get install -y google-chrome-stable
 
 RUN chmod +x chrome_setup.sh \
-    && ./chrome_setup.sh
+    && ./chrome_setup.sh linux
 
 ENV PATH="/opt/google/chrome:/usr/local/bin:/root/.pixi/bin:$PATH"
 ENV CHROME_BIN="/opt/google/chrome/chrome"

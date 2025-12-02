@@ -27,7 +27,7 @@ jobs:
           echo "/Applications/Google Chrome.app/Contents/MacOS" >> $GITHUB_PATH
       
       - name: Run setup scripts
-        run: chmod +x chrome_setup.sh && ./chrome_setup.sh
+        run: chmod +x chrome_setup.sh && ./chrome_setup.sh macos
                 
       - name: Verify Chrome
         run: |

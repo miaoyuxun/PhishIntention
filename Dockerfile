@@ -31,10 +31,14 @@ RUN export KMP_DUPLICATE_LIB_OK=TRUE \
     && curl -fsSL https://pixi.sh/install.sh | sh \
     && echo 'export PATH="/root/.pixi/bin:$PATH"' >> /etc/profile.d/pixi.sh
 
-ENV PATH="/root/.pixi/bin:$PATH"
-
 RUN chmod +x chrome_setup.sh \
     && ./chrome_setup.sh
+
+ENV PATH="chrome-linux64/chrome:/root/.pixi/bin:$PATH"
+
+RUN which pixi
+
+RUN which google-chrome
 
 RUN pixi install
 

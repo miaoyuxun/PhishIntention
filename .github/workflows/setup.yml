@@ -1,4 +1,4 @@
-name: Static tests
+name: Setup tests
 on:
   push:
     branches:

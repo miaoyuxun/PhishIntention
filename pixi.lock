@@ -282,8 +282,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl
-      - pypi: https://download.pytorch.org/whl/cpu/torch-2.9.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
-      - pypi: https://download.pytorch.org/whl/cpu/torchvision-0.24.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
+      - pypi: https://download.pytorch.org/whl/cpu/torch-2.8.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
+      - pypi: https://download.pytorch.org/whl/cpu/torchvision-0.23.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/31/5b/94237a3485620dbff9741df02ff6d8acaa5fdec67d81ab3f62e4d8511bf7/trio-0.31.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c7/19/eb640a397bba49ba49ef9dbe2e7e5c04202ba045b6ce2ec36e9cadc51e04/trio_websocket-0.12.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b5/b5/3bd0b038d80950ec13e6a2c8d03ed8354867dc60064b172f2f4ffac8afbe/webdriver_manager-4.0.2-py2.py3-none-any.whl
@@ -462,8 +462,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl
-      - pypi: https://download.pytorch.org/whl/cpu/torch-2.9.0-cp310-none-macosx_11_0_arm64.whl
-      - pypi: https://download.pytorch.org/whl/cpu/torchvision-0.24.0-cp310-cp310-macosx_11_0_arm64.whl
+      - pypi: https://download.pytorch.org/whl/cpu/torch-2.8.0-cp310-none-macosx_11_0_arm64.whl
+      - pypi: https://download.pytorch.org/whl/cpu/torchvision-0.23.0-cp310-cp310-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/31/5b/94237a3485620dbff9741df02ff6d8acaa5fdec67d81ab3f62e4d8511bf7/trio-0.31.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c7/19/eb640a397bba49ba49ef9dbe2e7e5c04202ba045b6ce2ec36e9cadc51e04/trio_websocket-0.12.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b5/b5/3bd0b038d80950ec13e6a2c8d03ed8354867dc60064b172f2f4ffac8afbe/webdriver_manager-4.0.2-py2.py3-none-any.whl
@@ -674,8 +674,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl
-      - pypi: https://download.pytorch.org/whl/cpu/torch-2.9.0%2Bcpu-cp310-cp310-win_amd64.whl
-      - pypi: https://download.pytorch.org/whl/cpu/torchvision-0.24.0%2Bcpu-cp310-cp310-win_amd64.whl
+      - pypi: https://download.pytorch.org/whl/cpu/torch-2.8.0%2Bcpu-cp310-cp310-win_amd64.whl
+      - pypi: https://download.pytorch.org/whl/cpu/torchvision-0.23.0%2Bcpu-cp310-cp310-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/31/5b/94237a3485620dbff9741df02ff6d8acaa5fdec67d81ab3f62e4d8511bf7/trio-0.31.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/c7/19/eb640a397bba49ba49ef9dbe2e7e5c04202ba045b6ce2ec36e9cadc51e04/trio_websocket-0.12.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b5/b5/3bd0b038d80950ec13e6a2c8d03ed8354867dc60064b172f2f4ffac8afbe/webdriver_manager-4.0.2-py2.py3-none-any.whl
@@ -6418,87 +6418,87 @@ packages:
   - pkg:pypi/tomli?source=compressed-mapping
   size: 20973
   timestamp: 1760014679845
-- pypi: https://download.pytorch.org/whl/cpu/torch-2.9.0-cp310-none-macosx_11_0_arm64.whl
+- pypi: https://download.pytorch.org/whl/cpu/torch-2.8.0-cp310-none-macosx_11_0_arm64.whl
   name: torch
-  version: 2.9.0
-  sha256: 59484193b01299bf669520505a72b29d59a0028ae4c6d95f492938f186592208
+  version: 2.8.0
+  sha256: a467b49fe893a6a6cce89e3aee556edfdc64a722d7195fdfdd75cec9dea13779
   requires_dist:
   - filelock
   - typing-extensions>=4.10.0
   - setuptools ; python_full_version >= '3.12'
   - sympy>=1.13.3
-  - networkx>=2.5.1
+  - networkx
   - jinja2
-  - fsspec>=0.8.5
+  - fsspec
   - optree>=0.13.0 ; extra == 'optree'
   - opt-einsum>=3.3 ; extra == 'opt-einsum'
   - pyyaml ; extra == 'pyyaml'
-  requires_python: '>=3.10'
-- pypi: https://download.pytorch.org/whl/cpu/torch-2.9.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
+  requires_python: '>=3.9.0'
+- pypi: https://download.pytorch.org/whl/cpu/torch-2.8.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
   name: torch
-  version: 2.9.0+cpu
-  sha256: bd2a257e670ede9fc01c6d76dccdc473040913b8e9328169bf177dbdc38e2484
+  version: 2.8.0+cpu
+  sha256: 16d75fa4e96ea28a785dfd66083ca55eb1058b6d6c5413f01656ca965ee2077e
   requires_dist:
   - filelock
   - typing-extensions>=4.10.0
   - setuptools ; python_full_version >= '3.12'
   - sympy>=1.13.3
-  - networkx>=2.5.1
+  - networkx
   - jinja2
-  - fsspec>=0.8.5
+  - fsspec
   - optree>=0.13.0 ; extra == 'optree'
   - opt-einsum>=3.3 ; extra == 'opt-einsum'
   - pyyaml ; extra == 'pyyaml'
-  requires_python: '>=3.10'
-- pypi: https://download.pytorch.org/whl/cpu/torch-2.9.0%2Bcpu-cp310-cp310-win_amd64.whl
+  requires_python: '>=3.9.0'
+- pypi: https://download.pytorch.org/whl/cpu/torch-2.8.0%2Bcpu-cp310-cp310-win_amd64.whl
   name: torch
-  version: 2.9.0+cpu
-  sha256: 96f3f7aa4eb9e7fc5af8a722eaf1e5e32e3039dbafe817178d7b90a8566be32d
+  version: 2.8.0+cpu
+  sha256: 7cc4af6ba954f36c2163eab98cf113c137fc25aa8bbf1b06ef155968627beed2
   requires_dist:
   - filelock
   - typing-extensions>=4.10.0
   - sympy>=1.13.3
-  - networkx>=2.5.1
+  - networkx
   - jinja2
-  - fsspec>=0.8.5
+  - fsspec
   - setuptools ; python_full_version >= '3.12'
   - opt-einsum>=3.3 ; extra == 'opt-einsum'
   - optree>=0.13.0 ; extra == 'optree'
   - pyyaml ; extra == 'pyyaml'
-  requires_python: '>=3.10'
-- pypi: https://download.pytorch.org/whl/cpu/torchvision-0.24.0-cp310-cp310-macosx_11_0_arm64.whl
+  requires_python: '>=3.9.0'
+- pypi: https://download.pytorch.org/whl/cpu/torchvision-0.23.0-cp310-cp310-macosx_11_0_arm64.whl
   name: torchvision
-  version: 0.24.0
-  sha256: 5e8d5e667deff87bd66d26df6d225f46224bb0782d4f3f8f5d2f3068b5fd4492
+  version: 0.23.0
+  sha256: 7266871daca00ad46d1c073e55d972179d12a58fa5c9adec9a3db9bbed71284a
   requires_dist:
   - numpy
-  - torch==2.9.0
+  - torch==2.8.0
   - pillow>=5.3.0,!=8.3.*
   - gdown>=4.7.3 ; extra == 'gdown'
   - scipy ; extra == 'scipy'
-  requires_python: '>=3.10'
-- pypi: https://download.pytorch.org/whl/cpu/torchvision-0.24.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
+  requires_python: '>=3.9'
+- pypi: https://download.pytorch.org/whl/cpu/torchvision-0.23.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl
   name: torchvision
-  version: 0.24.0+cpu
-  sha256: 81063c59524c2f1c3f0751d6f61961072e51f7faba2db9758b6524af7c6d072a
+  version: 0.23.0+cpu
+  sha256: bc6cee94bcc145d59426fd5289ca91e42cdb60e9886590f29d88f9f03c6bdea3
   requires_dist:
   - numpy
-  - torch==2.9.0
+  - torch==2.8.0
   - pillow>=5.3.0,!=8.3.*
   - gdown>=4.7.3 ; extra == 'gdown'
   - scipy ; extra == 'scipy'
-  requires_python: '>=3.10'
-- pypi: https://download.pytorch.org/whl/cpu/torchvision-0.24.0%2Bcpu-cp310-cp310-win_amd64.whl
+  requires_python: '>=3.9'
+- pypi: https://download.pytorch.org/whl/cpu/torchvision-0.23.0%2Bcpu-cp310-cp310-win_amd64.whl
   name: torchvision
-  version: 0.24.0+cpu
-  sha256: 2a23778e0bfe138ff974d2a6e9ee39dd4e399cafc88f4b1fb921c811e81b53fe
+  version: 0.23.0+cpu
+  sha256: 758fa965628ec53712fffdd866401329e8a5f2c5d36325b17aad771d2d2e3495
   requires_dist:
   - numpy
-  - torch==2.9.0
+  - torch==2.8.0
   - pillow>=5.3.0,!=8.3.*
   - gdown>=4.7.3 ; extra == 'gdown'
   - scipy ; extra == 'scipy'
-  requires_python: '>=3.10'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/linux-64/tornado-6.5.2-py310h7c4b9e2_1.conda
   sha256: 8dc52bac73848a0334c65491f8de31c5c298464888cfa35d1c41b8d3051131f0
   md5: c5f63ba41df24b9025c9196353541ed5

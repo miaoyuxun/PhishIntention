@@ -533,7 +533,7 @@ def pred_brand(model, ocr_model, domain_map, logo_feat_list, file_name_list, sho
 
     return None, None, top3_simlist[0]
 
-def cache_reference_list(model, ocr_model, targetlist_path: str, grayscale=False):
+def cache_reference_list(model, ocr_model, targetlist_path: str, grayscale=False, reload_targetlist=False):
     '''
     cache the embeddings of the reference list
     '''
@@ -542,6 +542,7 @@ def cache_reference_list(model, ocr_model, targetlist_path: str, grayscale=False
     logo_feat_list = []
     file_name_list = []
 
+    get_target_embedding = reload_targetlist or (not os.path.exists(os.path.join(os.getcwd(), 'LOGO_FEATS.npy')))
     for target in tqdm(os.listdir(targetlist_path)):
         if target.startswith('.'):  # skip hidden files
             continue
@@ -550,11 +551,18 @@ def cache_reference_list(model, ocr_model, targetlist_path: str, grayscale=False
                     or logo_path.endswith('.JPG') or logo_path.endswith('.JPEG'):
                 if logo_path.startswith('loginpage') or logo_path.startswith('homepage'):  # skip homepage/loginpage
                     continue
-                logo_feat_list.append(get_ocr_aided_siamese_embedding(img=os.path.join(targetlist_path, target, logo_path),
-                                                                      model=model,
-                                                                      ocr_model=ocr_model,
-                                                                      grayscale=grayscale))
+                if get_target_embedding:
+                    logo_feat_list.append(get_ocr_aided_siamese_embedding(img=os.path.join(targetlist_path, target, logo_path),
+                                                                        model=model,
+                                                                        ocr_model=ocr_model,
+                                                                        grayscale=grayscale))
                 file_name_list.append(str(os.path.join(targetlist_path, target, logo_path)))
+                
+    if get_target_embedding:
+        np.save(os.path.join(os.getcwd(),'LOGO_FEATS.npy'), np.asarray(logo_feat_list))
+        print('Saved logo features to LOGO_FEATS.npy')
+    else:
+        logo_feat_list = np.load(os.path.join(os.getcwd(),'LOGO_FEATS.npy'))
 
     return np.asarray(logo_feat_list), np.asarray(file_name_list)
 

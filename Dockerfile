@@ -48,5 +48,5 @@ RUN echo "=== test Chrome installation ===" && \
 
 RUN pixi install
 
-#RUN chmod +x setup.sh \
-#    && ./setup.sh
+RUN chmod +x setup.sh \
+    && ./setup.sh

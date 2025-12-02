@@ -35,5 +35,5 @@ RUN chmod +x chrome_setup.sh \
 
 RUN pixi install
 
-RUN chmod +x setup.sh \
-    && ./setup.sh
+#RUN chmod +x setup.sh \
+#    && ./setup.sh

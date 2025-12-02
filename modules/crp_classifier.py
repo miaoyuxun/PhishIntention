@@ -153,7 +153,8 @@ def proc_tree(tree, obfuscate=False):
                     try:
                         if input.get('type') == "password":
                             input.attrib['type'] = "passw0rd"
-                    except:
+                    except Exception as e:
+                        print(e)
                         pass
 
         methods = []
@@ -162,7 +163,6 @@ def proc_tree(tree, obfuscate=False):
         count_username = []
 
         for form in forms:
-            count = 0
             methods.append(form.get('method'))  # get method of form "post"/"get"
 
             inputs = form.xpath('.//input')

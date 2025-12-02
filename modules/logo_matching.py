@@ -616,7 +616,6 @@ def check_domain_brand_inconsistency(logo_boxes,
             if (matched_target is not None) and (matched_domain is not None):
                 matched_coord = coord
                 matched_domain_parts = [tldextract.extract(x).domain for x in matched_domain]
-                matched_suffix_parts = [tldextract.extract(x).suffix for x in matched_domain]
                 
                 # If the webpage domain exactly aligns with the target website's domain => Benign
                 if extracted_domain in matched_domain:

@@ -4,7 +4,6 @@ from modules.awl_detector import config_rcnn
 from modules.crp_classifier import credential_config
 from modules.logo_matching import siamese_model_config, ocr_model_config, cache_reference_list
 import os
-import numpy as np
 
 def get_absolute_path(relative_path):
     base_path = os.path.dirname(__file__)

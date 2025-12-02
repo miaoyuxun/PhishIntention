@@ -2,7 +2,7 @@ import torch
 import cv2
 import numpy as np
 import math
-
+import torch.nn.functional as F
 
 def coord_reshape(coords, image_shape, reshaped_size=(256, 512)):
     '''
@@ -185,7 +185,6 @@ def read_img_reverse(img, coords, types, num_types=5, grid_num=10) -> torch.Tens
     return torch.from_numpy(grid_arrs)
 
 
-import torch.nn.functional as F
 
 def resolution_alignment(img1, img2):
     '''

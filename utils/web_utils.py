@@ -42,7 +42,8 @@ def click_button(button_text):
     try:
         helium.click(helium.Button(button_text))
         return True
-    except:
+    except Exception as e:
+        print(e)
         return False
 
 def get_page_text(driver):

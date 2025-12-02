@@ -1,3 +1,0 @@
-accounts.g.cdcde.com	https://accounts.g.cdcde.com/ServiceLogin?passive=1209600&osid=1&continue=https://plus.g.cdcde.com/&followup=https://plus.g.cdcde.com/	1	Google	['google.com', 'appspot.com', 'appspot.com']	0.96793044	1.5196590423583984|0.8230621814727783|0.017104625701904297|0
-ru.russianmastercach-republick.xyz	https://ru.russianmastercach-republick.xyz/	0	Mastercard International	['mastercard.com']	0.96787167	1.3973820209503174|0.5925214290618896|0.38642430305480957|5.225016117095947
-www.paypal.com	https://www.paypal.com/hk/home	0	None	None	0.77494025	1.367154836654663|1.3948781490325928|0|0

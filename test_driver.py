@@ -21,3 +21,5 @@ def check_chromedriver():
             print(f"ChromeDriver 版本: {result.stdout}")
         except Exception as e:
             print(f"执行失败: {e}")
+            
+check_chromedriver()

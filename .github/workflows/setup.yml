@@ -14,13 +14,9 @@ jobs:
       - name: Build Docker image
         run: docker build -t phishintention .
 
-      - name: Run chromedriver test
-        #run: docker run --rm phishintention pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt
-        run: docker run --rm phishintention pixi run ./chromedriver/chromedriver --version
-
       - name: Run test
-        #run: docker run --rm phishintention pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1125.txt
-        run: docker run --rm phishintention pixi run python test_driver.py
+        run: docker run --rm phishintention pixi run python phishintention.py --folder datasets/test_sites --output_txt test_1202.txt
+        #run: docker run --rm phishintention pixi run python test_driver.py
 
   windows_test:
     if: false

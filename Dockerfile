@@ -42,7 +42,7 @@ RUN chmod +x chrome_setup.sh \
 ENV PATH="/opt/google/chrome:/usr/local/bin:/root/.pixi/bin:$PATH"
 ENV CHROME_BIN="/opt/google/chrome/chrome"
 
-RUN echo "=== 验证Chrome安装 ===" && \
+RUN echo "=== test Chrome installation ===" && \
     which google-chrome-stable && \
     google-chrome-stable --version
 
